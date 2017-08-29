@@ -1,0 +1,13 @@
+#carre {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(75, 231, 152);
+  margin-bottom: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+button {
+  width: 100%;
+}

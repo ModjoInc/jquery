@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Exercice 3-1</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Exercice 3-1</h1>
+          <input type="text">
+          <button id="counter" type="submit" name="button">Clique-moi</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      let counter=$('input:text').val();
+
+      $('#counter').click(function(e){
+        counter++;
+        $('input:text').val(counter);
+        e.preventDefault();
+        });
+
+    })
+
+
+    </script>
+  </body>
+</html>

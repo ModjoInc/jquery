@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Exercice 3-3</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Exercice 3-3</h1>
+          <input type="text" id="counter">
+          <input type="text" id="try">
+          <button type="submit" id="submit">Try!</button>
+
+
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      let counter=$('#counter').val();
+      let lucky= 27;
+
+      $('#submit').click(function(e){
+        e.preventDefault();
+        let guess=$('#try').val();
+        console.log(guess);
+        if (guess > lucky) {
+          counter++;
+          alert('moins');
+          $('#counter').val(counter);
+        } else if (guess < lucky) {
+          counter++;
+          alert('plus');
+          $('#counter').val(counter);
+        } else {
+          alert('Gagné ^^ \n' + 'Vous avez trouvé en \n' + counter +' essais');
+
+        };
+      });
+    });
+
+
+    </script>
+  </body>
+</html>

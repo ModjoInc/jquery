@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercice 3-4</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="col-md-12 ">
+        <h1>Exercice 3-4</h1>
+      </div>
+      <div class="col-md-4 col-md-offset-4" id='rectangle'>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item"><button type="submit" id="submit1">+10px</button></li>
+          <li class="list-group-item"><button type="submit" id="submit2">Blue Color</button></li>
+          <li class="list-group-item"><button type="submit" id="submit3">Reset Color</button></li>
+          <li class="list-group-item"><button type="submit" id="submit4">Hide</button></li>
+          <li class="list-group-item"><button type="submit" id="submit5">Show</button></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+    $(document).ready(function(){
+      let agrandir=$('#submit1');
+      let blue=$('#submit2');
+      let reset=$('#submit3');
+      let hide=$('#submit4');
+      let show=$('#submit5');
+      let rect=$('#rectangle');
+
+      agrandir.click(function(e){
+        e.preventDefault();
+        rect.css('width', '+=10');
+        rect.css('height', '+=10');
+      });
+
+      blue.click(function(e){
+        e.preventDefault();
+        rect.css('background-color', 'blue');
+      });
+
+      reset.click(function(e){
+        e.preventDefault();
+        rect.css({'width':'', 'height':'','background-color':''});
+      });
+
+      hide.click(function(e){
+        e.preventDefault();
+        rect.fadeOut();
+      });
+
+      show.click(function(e){
+        e.preventDefault();
+        rect.fadeIn('slow', 'swing');
+      });
+
+    });
+
+    </script>
+  </body>
+</html>

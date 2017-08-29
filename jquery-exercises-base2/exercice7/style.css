@@ -7,15 +7,12 @@ div {
 	height: 700px;
 	float:left;
 }
-
 #instructions li {
 	line-height:200%;
 }
-
 .vert {
 	color:green;
 }
-
 .rouge {
 	color:red;
 }
